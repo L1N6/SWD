@@ -39,7 +39,7 @@ public partial class Swd392Project1Context : DbContext
                               .SetBasePath(Directory.GetCurrentDirectory())
                               .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
         IConfigurationRoot configuration = builder.Build();
-        optionsBuilder.UseSqlServer(configuration.GetConnectionString("SWD_392_Project1"));
+        optionsBuilder.UseSqlServer(configuration.GetConnectionString("SWD_392_Project"));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

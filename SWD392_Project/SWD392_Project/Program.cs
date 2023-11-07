@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Swd392Project1Context>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("SWD_392_Project1")));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("SWD_392_Project")));
 
 var app = builder.Build();
 

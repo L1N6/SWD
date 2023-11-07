@@ -1,8 +1,97 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        .header {
+            background-color: #1877f2;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px; /* Điều chỉnh giá trị max-width theo mong muốn */
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .search-bar {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .event-container {
+            max-height: 400px; /* Điều chỉnh chiều cao tối đa theo mong muốn */
+            overflow-y: auto; /* Bật kiểu trượt theo chiều dọc khi nội dung vượt quá kích thước cố định */
+        }
+
+        .event {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            max-width: 30%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .event-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .event-description {
+            font-size: 14px;
+        }
+
+        .event-image {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm sự kiện..." />
+            <input type="date" id="startDate" name="startDate" placeholder="Ngày bắt đầu">
+            <input type="date" id="endDate" name="endDate" placeholder="Ngày kết thúc">
+            <button>Tìm kiếm</button>
+        </div>
+
+        <div class="event-container">
+            @for (int i = 1; i <= 10; i++)
+            {
+                <div class="event">
+                    <img class="event-image" src="img/nhan-vien-to-chuc-su-kien.jpg" alt="Event @i">
+                    <div class="event-title">Sự kiện @i</div>
+                    <div class="event-description">Mô tả sự kiện @i.</div>
+                    <div class="event-details">
+                        <p>Ngày diễn ra: 01/0@i/2023</p>
+                        <p>Vị trí: Địa điểm A</p>
+                    </div>
+                    <button class="btn btn-info">Quan tâm</button>
+                </div>
+
+                @if (i % 3 == 0)
+                {
+                    <div class="clearfix"></div>
+                }
+            }
+        </div>
+    </div>
+</body>
+</html>

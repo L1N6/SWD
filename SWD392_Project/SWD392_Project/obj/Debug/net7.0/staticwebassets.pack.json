@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\FALL23\\SWD392\\Practice\\SWD\\SWD392_Project\\SWD392_Project\\wwwroot\\img\\nhan-vien-to-chuc-su-kien.jpg",
+      "PackagePath": "staticwebassets\\img\\nhan-vien-to-chuc-su-kien.jpg"
+    },
+    {
       "Id": "D:\\FALL23\\SWD392\\Practice\\SWD\\SWD392_Project\\SWD392_Project\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

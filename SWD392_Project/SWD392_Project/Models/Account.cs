@@ -18,6 +18,7 @@ public partial class Account
     public string? Phone { get; set; }
 
     public string? Address { get; set; }
+    public string? Avatar { get; set; }
 
     public long RoleId { get; set; }
 

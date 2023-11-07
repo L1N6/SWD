@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using SWD392_Project.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<Swd392Project1Context>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("SWD_392_Project1")));
 
 var app = builder.Build();
 

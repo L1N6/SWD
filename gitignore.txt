@@ -42,5 +42,5 @@ msbuild.log
 msbuild.err
 msbuild.wrn
 .Models/Swd392Project1Context.cs
-Program.cs
-appsettings.json
+./Program.cs
+./appsettings.json

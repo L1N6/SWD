@@ -30,6 +30,7 @@ CREATE TABLE Accounts (
     account_id BIGINT IDENTITY(1,1) PRIMARY KEY,
     user_name NVARCHAR(250) UNIQUE NOT NULL,
     password NVARCHAR(250) NOT NULL,
+	avatar NVARCHAR(250) NULL,
     email NVARCHAR(250) UNIQUE NOT NULL,
     full_name NVARCHAR(250) NULL,
     phone NVARCHAR(11) NULL,

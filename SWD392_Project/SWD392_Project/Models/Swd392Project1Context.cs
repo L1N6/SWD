@@ -39,7 +39,7 @@ public partial class Swd392Project1Context : DbContext
                               .SetBasePath(Directory.GetCurrentDirectory())
                               .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
         IConfigurationRoot configuration = builder.Build();
-        optionsBuilder.UseSqlServer(configuration.GetConnectionString("SWD_392_Project1"));
+        optionsBuilder.UseSqlServer(configuration.GetConnectionString("SWD_392_Project"));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -56,6 +56,9 @@ public partial class Swd392Project1Context : DbContext
             entity.Property(e => e.Address)
                 .HasMaxLength(50)
                 .HasColumnName("address");
+            entity.Property(e => e.Avatar)
+                .HasMaxLength(50)
+                .HasColumnName("avatar");
             entity.Property(e => e.Email)
                 .HasMaxLength(250)
                 .HasColumnName("email");
